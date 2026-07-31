@@ -21,13 +21,22 @@
     { "texto": "⭐ Déjanos una reseña en Google", "url": "https://g.page/r/PLACE_ID_1/review" }
   ]
   },
-  "medellin-adventure": {
-    "nombre": "The Medellin Adventure - Tour Operador",
-    "subtitulo": "Vive experiencias inolvidables en Medellín y Antioquia",
-    "descripcion": "Tour grupales y privador, Guias profesionales, Atención personalizada, Turismo responsable.",
-    "logo": "/logos/logo.png",
-    "colorPrimario": "#166534",
-    "colorFondo": "#0f172a",
-    "googleReviewUrl": "https://g.page/r/PLACE_ID_ENTRE_GUADUALES/review" 
-  }
+ "the-medellin-adventure": {
+  "nombre": "The Medellín Adventure",
+  "subtitulo": "Tours y experiencias en Medellín",
+  "descripcion": "Gracias por vivir esta experiencia con nosotros. Tu opinión nos ayuda a seguir creciendo.",
+  "logo": "/logos/the-medellin-adventure.png",
+  "colorPrimario": "#0ea5e9",
+  "colorFondo": "#111827",
+  "botones": [
+    {
+      "texto": "🌐 Página web",
+      "url": "https://..."
+    },
+    {
+      "texto": "⭐ Déjanos una reseña",
+      "url": "https://g.page/..."
+    }
+  ]
 }
+}  
