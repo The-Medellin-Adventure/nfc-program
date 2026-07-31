@@ -20,5 +20,13 @@
     { "texto": "🥾 Reservar tour privado", "url": "https://tu-link-de-tours.com" },
     { "texto": "⭐ Déjanos una reseña en Google", "url": "https://g.page/r/PLACE_ID_1/review" }
   ]
-  }
+  },
+  "medellin-adventure": {
+    "nombre": "The Medellin Adventure - Tour Operador",
+    "subtitulo": "Vive experiencias inolvidables en Medellín y Antioquia",
+    "descripcion": "Tour grupales y privador | Guias profesionales | Atención personalizada | Turismo responsable.",
+    "logo": "/logos/entre-guaduales.png",
+    "colorPrimario": "#166534",
+    "colorFondo": "#0f172a",
+    "googleReviewUrl": "https://g.page/r/PLACE_ID_ENTRE_GUADUALES/review" 
 }
