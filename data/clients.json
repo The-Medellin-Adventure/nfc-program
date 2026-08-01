@@ -15,14 +15,13 @@
   "entre-guaduales": {
     "nombre": "Condominio Turístico Entre Guaduales",
     "subtitulo": "Hospedaje y tours privados en medio de la naturaleza",
-    "descripcion": "Un espacio pensado para desconectarte: cabañas rodeadas de guadua, senderos privados y experiencias guiadas para conocer la región. Gracias por tu visita, nos encantaría leer tu opinión.",
+    "descripcion": "Un espacio pensado para desconectarte: cabañas, senderos y experiencias guiadas para conocer la región. Gracias por tu visita, nos encantaría leer tu opinión.",
     "logo": "/logos/entre-guaduales.png",
     "colorPrimario": "#166534",
     "colorFondo": "#0f172a",
     "botones": [
-      { "texto": "🏡 Ver hospedaje", "url": "https://tu-link-de-hospedaje.com" },
-      { "texto": "🥾 Reservar tour privado", "url": "https://tu-link-de-tours.com" },
-      { "texto": "⭐ Déjanos una reseña en Google", "url": "https://g.page/r/PLACE_ID_ENTRE_GUADUALES/review" }
+      { "texto": "🥾 Conocenos en instagram", "url": "https://www.instagram.com/p/DXpjcmJlsI2/?igsh=MXN1aHJmMXk2cHdyZQ==" },
+      { "texto": "⭐ Déjanos una reseña en Google", "url": "https://g.page/r/CRRy7RIoOpRaEBM/review" }
     ]
   },
   "ktarata-cocorna": {
@@ -33,8 +32,7 @@
     "colorPrimario": "#b45309",
     "colorFondo": "#111111",
     "botones": [
-      { "texto": "📋 Ver menú", "url": "https://tu-link-del-menu.com" },
-      { "texto": "⭐ Dejar opinión en Google", "url": "https://g.page/r/PLACE_ID_KTARATA/review" }
+      { "texto": "⭐ Déjanos una reseña en Google", "url": "https://n9.cl/owol0v }
     ]
   }
 }
