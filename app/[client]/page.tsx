@@ -60,8 +60,8 @@ export default function ClientPage({ params }: { params: { client: string } }) {
         {/* Logo enmarcado */}
         <div
           style={{
-            width: '112px',
-            height: '112px',
+            width: '168px',
+            height: '168px',
             borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
@@ -74,8 +74,8 @@ export default function ClientPage({ params }: { params: { client: string } }) {
           <Image
             src={data.logo}
             alt={data.nombre}
-            width={64}
-            height={64}
+            width={110}
+            height={110}
             style={{ objectFit: 'contain', borderRadius: '50%' }}
             priority
           />
