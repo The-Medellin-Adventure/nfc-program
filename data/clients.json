@@ -16,7 +16,7 @@
     "nombre": "Condominio Turístico Entre Guaduales",
     "subtitulo": "Hospedaje y tours privados en medio de la naturaleza",
     "descripcion": "Un espacio pensado para desconectarte: cabañas, senderos y experiencias guiadas para conocer la región. Gracias por tu visita, nos encantaría leer tu opinión.",
-    "logo": "/logos/entre-guaduales.png",
+    "logo": "/logos/condominio.jpeg",
     "colorPrimario": "#F9D365",
     "colorFondo": "#0f172a",
     "botones": [
@@ -28,7 +28,7 @@
     "nombre": "Ktarata Cocorná",
     "subtitulo": "Sabor local, ambiente familiar",
     "descripcion": "Platos preparados con ingredientes de la región. Escanea para ver nuestro menú o dejar tu opinión, ¡nos importa mucho tu experiencia!",
-    "logo": "/logos/ktarata.png",
+    "logo": "/logos/ktarata.jpeg",
     "colorPrimario": "#b45309",
     "colorFondo": "#111111",
     "botones": [
