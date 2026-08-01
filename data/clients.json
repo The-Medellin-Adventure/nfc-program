@@ -26,10 +26,10 @@
   },
   "ktarata-cocorna": {
     "nombre": "Ktarata Cocorná",
-    "subtitulo": "Sabor local, ambiente familiar",
-    "descripcion": "Platos preparados con ingredientes de la región. Escanea para ver nuestro menú o dejar tu opinión, ¡nos importa mucho tu experiencia!",
+    "subtitulo": "Toda una aventura",
+    "descripcion": "Platos preparados con ingredientes de la región. ¡nos importa mucho tu experiencia!",
     "logo": "/logos/katarata.jpeg",
-    "colorPrimario": "#b45309",
+    "colorPrimario": "#E50914",
     "colorFondo": "#111111",
     "botones": [
       { "texto": "⭐ Déjanos una reseña en Google", "url": "https://n9.cl/owol0v" }
