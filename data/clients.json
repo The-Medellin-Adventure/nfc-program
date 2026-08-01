@@ -7,9 +7,9 @@
     "colorPrimario": "#2563eb",
     "colorFondo": "#0f172a",
     "botones": [
-      { "texto": "⭐ Déjanos una reseña en Google", "url": "https://g.page/r/CVOIOaaT0ulcEBM/review" }
-      { "texto": "⭐ Visita nuestra página web", "url": "https://themedellinadventure-com.webnode.com.co/destinos/" }
-      { "texto": "⭐ Conoce nuestra guia virtual", "url": "https://the-medellin-adventure.github.io/guiavirtual/" }
+      { "texto": "⭐ Déjanos una reseña en Google", "url": "https://g.page/r/CVOIOaaT0ulcEBM/review" },
+      { "texto": "⭐ Visita nuestra página web", "url": "https://themedellinadventure-com.webnode.com.co/destinos/" },
+      { "texto": "⭐ Conoce nuestra guia virtual", "url": "https://the-medellin-adventure.github.io/guiavirtual/" },
     ]
   },
   "entre-guaduales": {
