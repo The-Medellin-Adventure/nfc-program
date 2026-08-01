@@ -1,9 +1,9 @@
 {
-  "demo": {
-    "nombre": "Café Aroma",
-    "subtitulo": "Café de especialidad en el centro de Medellín",
+  "the-medellin-adventure": {
+    "nombre": "The Medellín Adventure",
+    "subtitulo": "Tour Operador",
     "descripcion": "Desde 2015 servimos café colombiano tostado en casa. Gracias por acompañarnos hoy, tu opinión nos ayuda a seguir mejorando.",
-    "logo": "/logos/demo.png",
+    "logo": "/logos/logo.png",
     "colorPrimario": "#2563eb",
     "colorFondo": "#0f172a",
     "botones": [
