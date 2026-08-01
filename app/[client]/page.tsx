@@ -1,7 +1,10 @@
-import { notFound } from 'next/navigation';
-import clients from '../../data/clients.json';
-import Image from 'next/image';
+// ── IMPORTS ──────────────────────────────────────────────────────────
+// Herramientas que usa este archivo.
+import { notFound } from 'next/navigation';       // Muestra un 404 si el cliente no existe
+import clients from '../../data/clients.json';    // Tu archivo de datos de todos los clientes
+import Image from 'next/image';                   // Componente de imagen optimizado de Next.js
 
+// ── TIPOS (solo para que TypeScript valide la forma de los datos) ──────
 type Boton = {
   texto: string;
   url: string;
@@ -9,30 +12,56 @@ type Boton = {
 
 type ClientData = {
   nombre: string;
-  subtitulo?: string;
+  subtitulo?: string;      // el "?" significa que es opcional
   descripcion?: string;
   logo: string;
   colorPrimario: string;
   colorFondo: string;
-  botones: Boton[];
+  botones: Boton[];         // una lista de botones
 };
 
 const clientsData = clients as Record<string, ClientData>;
 
-// Pre-genera cada página de cliente en el build (más rápido y no expone
-// lógica de "búsqueda" en tiempo real al navegador).
+// ── FUNCIÓN 1: generateStaticParams ─────────────────────────────────
+// Le dice a Next.js: "en el momento de compilar, crea una página real
+// (HTML) por cada cliente que exista en clients.json". Gracias a esto,
+// cada cliente nuevo que agregues al JSON obtiene su propia página
+// automáticamente, sin que tengas que tocar este archivo.
 export function generateStaticParams() {
   return Object.keys(clientsData).map((slug) => ({ client: slug }));
 }
 
+// ── FUNCIÓN 2: generateMetadata (la que agregamos) ──────────────────
+// Controla el título que aparece en la PESTAÑA DEL NAVEGADOR y en las
+// vistas previas al compartir el link (WhatsApp, redes, etc).
+// Busca los datos del cliente actual según la URL y usa su "nombre"
+// como título de la pestaña.
+export function generateMetadata({ params }: { params: { client: string } }) {
+  const data = clientsData[params.client];
+  if (!data) return {};
+  return {
+    title: data.nombre,
+    description: data.subtitulo || data.descripcion,
+  };
+}
+
+// ── FUNCIÓN 3: ClientPage (el componente principal) ─────────────────
+// Esta es la que dibuja TODO lo que ves en pantalla: logo, nombre,
+// subtítulo, descripción y botones. "params.client" es el slug que
+// viene de la URL (ej: "entre-guaduales"), y con eso busca los datos
+// exactos de ESE cliente en el JSON.
 export default function ClientPage({ params }: { params: { client: string } }) {
   const data = clientsData[params.client];
 
+  // Si alguien entra a una URL que no corresponde a ningún cliente,
+  // muestra la página de error 404.
   if (!data) {
     notFound();
   }
 
   return (
+    // Contenedor de toda la pantalla: fondo con degradado usando los
+    // colores del cliente, todo centrado vertical y horizontalmente.
     <main
       style={{
         minHeight: '100vh',
@@ -46,6 +75,7 @@ export default function ClientPage({ params }: { params: { client: string } }) {
         color: 'white',
       }}
     >
+      {/* Columna central angosta que agrupa todo el contenido */}
       <div
         className="fade-in"
         style={{
@@ -57,7 +87,7 @@ export default function ClientPage({ params }: { params: { client: string } }) {
           gap: '2rem',
         }}
       >
-        {/* Logo enmarcado */}
+        {/* ── LOGO ── círculo con anillo del color de marca alrededor */}
         <div
           style={{
             width: '168px',
@@ -67,8 +97,8 @@ export default function ClientPage({ params }: { params: { client: string } }) {
             alignItems: 'center',
             justifyContent: 'center',
             background: 'rgba(255,255,255,0.04)',
-            border: `1.5px solid ${data.colorPrimario}66`,
-            boxShadow: `0 0 0 6px rgba(255,255,255,0.03)`,
+            border: `2px solid ${data.colorPrimario}66`,
+            boxShadow: `0 0 0 8px rgba(255,255,255,0.03)`,
           }}
         >
           <Image
@@ -81,7 +111,7 @@ export default function ClientPage({ params }: { params: { client: string } }) {
           />
         </div>
 
-        {/* Nombre, subtítulo, divisor y descripción */}
+        {/* ── NOMBRE, SUBTÍTULO, LÍNEA DIVISORA Y DESCRIPCIÓN ── */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.9rem' }}>
           <h1
             style={{
@@ -95,6 +125,7 @@ export default function ClientPage({ params }: { params: { client: string } }) {
             {data.nombre}
           </h1>
 
+          {/* Solo se muestra si el cliente tiene "subtitulo" en el JSON */}
           {data.subtitulo && (
             <p
               style={{
@@ -109,6 +140,7 @@ export default function ClientPage({ params }: { params: { client: string } }) {
             </p>
           )}
 
+          {/* Línea fina decorativa */}
           <span
             aria-hidden="true"
             style={{
@@ -120,6 +152,7 @@ export default function ClientPage({ params }: { params: { client: string } }) {
             }}
           />
 
+          {/* Solo se muestra si el cliente tiene "descripcion" en el JSON */}
           {data.descripcion && (
             <p
               style={{
@@ -136,7 +169,9 @@ export default function ClientPage({ params }: { params: { client: string } }) {
           )}
         </div>
 
-        {/* Botones */}
+        {/* ── BOTONES ── recorre la lista "botones" del JSON y dibuja
+            uno por cada elemento. El ÚLTIMO de la lista sale resaltado
+            (fondo sólido); los demás salen solo con borde. */}
         <div
           style={{
             width: '100%',
@@ -149,7 +184,7 @@ export default function ClientPage({ params }: { params: { client: string } }) {
           {data.botones.map((boton, index) => {
             const esPrincipal = index === data.botones.length - 1;
             return (
-              <a
+              
                 key={`${boton.url}-${index}`}
                 href={boton.url}
                 target="_blank"
