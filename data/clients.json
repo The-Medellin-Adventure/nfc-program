@@ -2,12 +2,14 @@
   "the-medellin-adventure": {
     "nombre": "The Medellín Adventure",
     "subtitulo": "Tour Operador",
-    "descripcion": "Desde 2015 servimos café colombiano tostado en casa. Gracias por acompañarnos hoy, tu opinión nos ayuda a seguir mejorando.",
+    "descripcion": "The Medellín Adventure somos una empresa turística dedicada a brindar experiencias inolvidables. Ofrecemos recorridos guiados por la ciudad de Medellín y sus alrededores, explorando parques, comunas, miradores y municipios cercanos, con aventuras llenas de cultura, diversión y adrenalina.",
     "logo": "/logos/logo.png",
     "colorPrimario": "#2563eb",
     "colorFondo": "#0f172a",
     "botones": [
-      { "texto": "⭐ Déjanos una reseña en Google", "url": "https://g.page/r/CAFE_AROMA_ID/review" }
+      { "texto": "⭐ Déjanos una reseña en Google", "url": "https://g.page/r/CVOIOaaT0ulcEBM/review" }
+      { "texto": "⭐ Visita nuestra página web", "url": "https://themedellinadventure-com.webnode.com.co/destinos/" }
+      { "texto": "⭐ Conoce nuestra guia virtual", "url": "https://the-medellin-adventure.github.io/guiavirtual/" }
     ]
   },
   "entre-guaduales": {
